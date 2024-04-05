@@ -1,0 +1,272 @@
+/**common css start*/
+:root{
+    --highlight-color: #8484bf;
+    --primary-color: #0f2f44;
+    --light-color: #fefefe;
+    --box-color:#e2e2e2;
+    --hover-color: #ffc712;
+    --icon-color: #999999;
+    --text-color: #444444;
+    --border-color: #dedede;
+    --hover-background: #fff9e6;
+    --heading-font: "Abril Fatface", serif;
+    --secondary-font: "Ubuntu", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+body {
+    font-family: var(--body-font);
+}
+h1,h2 {
+    font-family: var(--heading-font);
+}
+h3,h4,h5,h6,a,button {
+    font-family: var(--secondary-font);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center {
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.w-50 {
+    width: 50%;
+}
+.w-33 {
+    width: calc(100% / 3);
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+/**common css end*/
+/** top-bar start*/
+#top-bar{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-family: var(--secondary-font);
+}
+#top-bar p{
+    line-height: 24px;
+    padding: 13px 0;
+}
+/**top-bar end*/
+/**nav-bar start*/
+#nav .menu ul li a{
+   font-size: 16px;
+   line-height: 24px;
+   color: var(--primary-color);
+   padding: 36px 19px;
+   display: inline-block;
+   font-weight: 500;
+   text-transform: capitalize;
+   z-index: 1;
+   position: relative;
+}
+#nav .menu ul li a::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    background-color: var(--hover-background);
+
+}
+#nav .menu ul li a:hover::before{
+    transform:scaleX(1) ;
+    transition: .4s;
+}
+#nav .menu ul li a:hover{
+  color: var(--hover-color);
+
+}
+#nav .menu ul li button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left:20px ;
+    border: 1px solid rgb(152, 152, 152);
+    color: #999999;
+
+}
+#nav .menu ul li button:hover{
+    color: var(--hover-color);
+    background-color: #dedede;
+    transition: .5s;
+}
+/**nav-bar end*/
+/**success part start*/
+
+#success{
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+
+}
+.inner-info{
+    width: 40%;
+}
+.inner-info h2{
+    font-size:50px;
+    line-height:70px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    font-family: var(--secondary-font-);
+}
+.inner-info h1{
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 70px;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 7px;
+}
+
+.inner-info h3{
+    font-size: 32px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--highlight-color);
+    letter-spacing: 17px;
+    margin:16px 0 31px 0;
+    text-transform: capitalize;
+}
+.inner-info p{
+    font-size: 14px;
+    line-height: 24px;
+    color:var(--text-color);
+    font-family: var(--body-font);
+    margin-top: 30px;
+}
+.inner-info a{
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: var(--light-color);
+    background-color: var(--highlight-color);
+    display: inline-block;
+    padding: 12.5px 21px;
+    border-radius: 8px;
+    font-weight: 500px;
+    transition: 0.6s;
+    margin-top: 32px;
+}
+.inner-info a:hover{
+    color:var(--highlight-color);
+    background-color: var(--light-color);
+}
+.inner-info button{
+    width:49px;
+    height:49px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    border: none;
+    color: var(--highlight-color);
+    margin-left:20px ;
+    transition: 0.4s;
+}
+.inner-info button:hover{
+    color:var(--light-color);
+    background-color: var(--highlight-color);
+}
+/**success part end*/
+/**about part start*/
+#about{
+    padding: 100px 0;
+    
+}
+.about-info{
+    width: 50%;
+}
+.about-info h3{
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-family: var(--heading-font);
+}
+.about-info p{
+    color: var(--primary-color);
+    line-height: 24px;
+    font-size: 14px;
+    
+}
+#about .list{
+    color: var(--primary-color);
+    margin-top: 30px;
+    line-height: 36px;
+    margin-left: 30px;
+}
+.btn a{
+    background-color: var(--hover-color);
+    color:var(--about-color);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    display: inline-block;
+    box-shadow: 10px 10px 5px var(--box-color);
+    transition: 0.4s;
+    margin-top: 25px;
+}
+.btn a:hover{
+    background-color: var(--hover-background);
+    color:#1a4d6e;
+}
+/**about part end*/
+
+/**our skill part start*/
+#skill .skill-info{
+    width: 40%;
+}
+#skill .skill-img{
+    width: 60%;
+}
+.skill-img img{
+    width: 105%;
+    margin-top: 29px;
+} 
+.skill-info h3{
+    color: #1a4d6e;
+    font-size: 32px;
+    font-family: var(--heading-font);
+    font-weight: 400;
+}  
+.skill-info p{
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-top: 29px;
+}  
+
+/**our skill part end*/
